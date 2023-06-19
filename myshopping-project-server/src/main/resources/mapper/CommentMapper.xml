@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shopping.mapper.CommentMapper">
+    <select id="getCommentByBookId" resultType="com.shopping.model.view.CommentView">
+        SELECT
+            comm.comment_id,
+            comm.comment_message,
+            comm.comment_time,
+            u.user_name
+        FROM
+            tbl_comment comm
+        INNER JOIN
+            tbl_user u
+        ON
+            comm.user_id=u.user_id
+        WHERE
+            comm.book_id=#{book_id}
+    </select>
+</mapper>
