@@ -1,7 +1,7 @@
 <template>
   <div class="win-logoin">
     <div class="container" id="login-container">
-      <div class="title">加中实训在线商城</div>
+      <div class="title">在线商城</div>
       <div class="login-input">
         <label>用户名:</label>
         <input type="text" v-model="user.username"/>
